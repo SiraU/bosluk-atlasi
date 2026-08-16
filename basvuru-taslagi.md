@@ -87,7 +87,7 @@ The atlas is a small, fully static web page with no server-side component and no
 ## 6. Teslim paketi kontrol listesi
 
 - [x] Eser: çalışan gezgin URL'si — https://kadimkutuphane.com/bosluk-atlasi
-- [x] Açık kaynak kod deposu (CC-BY) — [depo linkini buraya ekle, aşağıya bak]
+- [x] Açık kaynak kod deposu (CC-BY) — https://github.com/SiraU/bosluk-atlasi
 - [x] Hikâye: 1–2 sayfa İngilizce write-up (yukarıda, gerçek 844-eser graf sayılarıyla güncellendi)
 - [x] Lisans: repo README + LICENSE dosyasında CC-BY 4.0 belirtimi
 - [ ] Resmi başvuru formunun gönderilmesi (innovation@openaire.eu)
