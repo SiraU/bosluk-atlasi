@@ -11,8 +11,10 @@ WD = Path(__file__).parent
 
 def esc(s): return htmlmod.escape(str(s), quote=True)
 
-kume = json.load(open(WD / "graf_olcum_sonuc.json", encoding="utf-8"))
-atlas = json.load(open(WD / "atlas-veri.json", encoding="utf-8"))
+with open(WD / "graf_olcum_sonuc.json", encoding="utf-8") as f:
+    kume = json.load(f)
+with open(WD / "atlas-veri.json", encoding="utf-8") as f:
+    atlas = json.load(f)
 eserler = atlas["eserler"]
 
 # ---- Koleksiyon/kume tablosu, toplam yayina gore sirali ----
@@ -39,8 +41,10 @@ def bin_ayrac(n):
     cevredeki metne (baslik ictindeki gercek virguller vb.) dokunmaz."""
     return f"{n:,}".replace(",", ".")
 
+MAX_TOTAL = satirlar[0][2] if satirlar and satirlar[0][2] > 0 else 1
+
 def bar_row(kw, ad, total, scanned, tr, pct):
-    genislik = min(100, (total / satirlar[0][2]) * 100)
+    genislik = min(100, (total / MAX_TOTAL) * 100)
     tr_str = f"%{pct:.2f}".replace(".", ",") if pct > 0 else "0"
     renk = "var(--gold)" if pct > 0 else "var(--muted)"
     return (
@@ -97,6 +101,8 @@ HTML = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8">
 <title>Boşluk Atlası: Bir Alan Ne Kadar Yalnız Yaşıyor — Kadim Kütüphane</title>
 <meta name="description" content="OpenAIRE Graph'teki uluslararası araştırma yoğunluğunu, Kadim Kütüphane'nin çevirdiği kaynakların Türkçe erişilebilirliğiyle karşılaştıran açık veri aracı. Batı ezoterizmi alanı uluslararası canlı ama Türkçe bilimsel çıktı neredeyse sıfır.">
 <link rel="canonical" href="https://kadimkutuphane.com/bosluk-atlasi">
+<link rel="alternate" hreflang="tr" href="https://kadimkutuphane.com/bosluk-atlasi">
+<link rel="alternate" hreflang="en" href="https://kadimkutuphane.com/gap-atlas">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kadim Kütüphane">
 <meta property="og:locale" content="tr_TR">
@@ -131,7 +137,9 @@ b.classList.remove('open');b.setAttribute('aria-expanded','false');}});}});}})()
 
 <div class="wrap" style="max-width:860px">
 
-<div class="section-label" style="text-transform:none">BOŞLUK ATLASI · OpenAIRE AI Hackathon 2026 · {tarih_str}</div>
+<div class="section-label" style="text-transform:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap">
+<span>BOŞLUK ATLASI · OpenAIRE AI Hackathon 2026 · {tarih_str}</span>
+<a href="/gap-atlas" style="font-family:'Raleway',sans-serif;font-size:.78rem;letter-spacing:.06em;color:var(--gold);text-decoration:none;white-space:nowrap">English version &rarr;</a></div>
 <h1 style="font-family:'Cormorant Garamond',serif;color:var(--ink);font-size:2.6rem;font-weight:700;
 margin:0 0 .8rem;line-height:1.12">Bir alan ne kadar yalnız yaşıyor?</h1>
 <p style="font-family:'Raleway',sans-serif;font-size:1.04rem;line-height:1.75;color:var(--ink);
@@ -144,10 +152,10 @@ kataloğunun bu boşluğun neresinde durduğunu gösteriyor.
 </p>
 
 <div style="display:flex;gap:1rem;flex-wrap:wrap;margin:0 0 2.6rem">
-{stat_card(f"{toplam_yayin:,}".replace(",", "."), "taranan konu kümesinde toplam yayın", True)}
+{stat_card(bin_ayrac(toplam_yayin), "taranan konu kümesinde toplam yayın", True)}
 {stat_card(f"%{ort_tr_pct:.2f}".replace(".", ","), "ortalama Türkçe pay")}
 {stat_card("844", "Kadim Kütüphane'nin çevirdiği kaynak")}
-{stat_card(str(sifir_sayisi), "OpenAIRE'de iz bırakmamış çeviri")}
+{stat_card(bin_ayrac(sifir_sayisi), "OpenAIRE'de iz bırakmamış çeviri")}
 </div>
 
 <h2 style="font-family:'Cormorant Garamond',serif;color:var(--ink);font-size:1.7rem;font-weight:700;

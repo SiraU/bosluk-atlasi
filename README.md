@@ -8,7 +8,7 @@ esoteric tradition — Hermetica, Picatrix, alchemical and Kabbalistic sources, 
 material, etc.) sits inside the international OpenAIRE Graph, and how visible Turkish-language
 scholarship is around each of those texts.
 
-**Live result:** https://kadimkutuphane.com/bosluk-atlasi
+**Live result:** https://kadimkutuphane.com/gap-atlas (English) · https://kadimkutuphane.com/bosluk-atlasi (Turkish)
 
 ## The idea
 
@@ -36,7 +36,8 @@ Seven translations are already live on Zenodo as a first proof of this loop.
 | `graf_olcum.py` | Topic-level heat map: language distribution across 9 esotericism research clusters → `graf_olcum_sonuc.json` |
 | `kapsanmayan_eserler.csv` | The ~687 works whose auto-generated query needed manual/LLM-assisted disambiguation |
 | `uygula_yeni_sorgular.py` | Applies the corrected queries to `atlas-veri.json` and re-measures |
-| `bosluk_atlasi_uret.py` | Generates the static HTML page (`/bosluk-atlasi`) from `atlas-veri.json` + `graf_olcum_sonuc.json` |
+| `bosluk_atlasi_uret.py` | Generates the Turkish static page (`/bosluk-atlasi`) from `atlas-veri.json` + `graf_olcum_sonuc.json` |
+| `gap_atlas_en_uret.py` | Generates the English static page (`/gap-atlas`) from the same data |
 | `atlas-veri.json` | Final measured data: per-work OpenAIRE query, density, gap score |
 | `graf_olcum_sonuc.json` | Heat-map data: per-cluster totals and language counts |
 | `basvuru-taslagi.md` | Submission draft (story, checklist) |
@@ -50,8 +51,9 @@ python3 graf_olcum.py
 # 2. Full per-work measurement (844 works, ~30–40 min, polite 0.4s delay between calls)
 python3 atlas_betigi.py
 
-# 3. Generate the static page
+# 3. Generate the static pages (Turkish + English)
 python3 bosluk_atlasi_uret.py
+python3 gap_atlas_en_uret.py
 ```
 
 No API key is required — all measurements use the public OpenAIRE Graph API
