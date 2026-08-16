@@ -1,0 +1,152 @@
+{
+  "western esotericism": {
+    "total": 920,
+    "scanned": 920,
+    "turkish": 6,
+    "langs": {
+      "Undetermined": 484,
+      "English": 365,
+      "Russian": 15,
+      "German": 7,
+      "Spanish": 7,
+      "Polish": 7,
+      "Turkish": 6,
+      "Italian": 5,
+      "Czech": 4,
+      "French": 4
+    }
+  },
+  "hermetica": {
+    "total": 351,
+    "scanned": 351,
+    "turkish": 0,
+    "langs": {
+      "Undetermined": 217,
+      "English": 69,
+      "French": 18,
+      "Latin": 12,
+      "German": 10,
+      "Italian": 8,
+      "Spanish": 7,
+      "Spanish; Castilian": 3,
+      "Dutch; Flemish": 2,
+      "Polish": 2
+    }
+  },
+  "hermeticism": {
+    "total": 555,
+    "scanned": 555,
+    "turkish": 3,
+    "langs": {
+      "Undetermined": 210,
+      "English": 205,
+      "Italian": 26,
+      "Spanish": 15,
+      "Russian": 14,
+      "German": 13,
+      "French": 12,
+      "Spanish; Castilian": 9,
+      "Portuguese": 9,
+      "Czech": 8
+    }
+  },
+  "picatrix": {
+    "total": 140,
+    "scanned": 140,
+    "turkish": 0,
+    "langs": {
+      "Undetermined": 75,
+      "English": 41,
+      "French": 12,
+      "Italian": 6,
+      "Spanish": 3,
+      "Polish": 2,
+      "German": 1
+    }
+  },
+  "corpus hermeticum": {
+    "total": 311,
+    "scanned": 311,
+    "turkish": 1,
+    "langs": {
+      "Undetermined": 178,
+      "English": 58,
+      "Italian": 28,
+      "French": 13,
+      "German": 11,
+      "Portuguese": 3,
+      "Polish": 3,
+      "Russian": 3,
+      "Spanish; Castilian": 3,
+      "Slovenian": 2
+    }
+  },
+  "knights templar": {
+    "total": 368,
+    "scanned": 368,
+    "turkish": 10,
+    "langs": {
+      "Undetermined": 171,
+      "English": 147,
+      "Turkish": 10,
+      "Spanish": 7,
+      "Croatian": 6,
+      "Italian": 5,
+      "French": 4,
+      "German": 3,
+      "Lithuanian": 2,
+      "Russian": 2
+    }
+  },
+  "cornelius agrippa": {
+    "total": 220,
+    "scanned": 220,
+    "turkish": 0,
+    "langs": {
+      "Undetermined": 117,
+      "English": 55,
+      "German": 14,
+      "Italian": 10,
+      "Latin": 9,
+      "French": 4,
+      "Spanish": 3,
+      "Finnish": 2,
+      "Portuguese": 2,
+      "Croatian": 2
+    }
+  },
+  "gnosticism": {
+    "total": 2402,
+    "scanned": 1000,
+    "turkish": 0,
+    "langs": {
+      "Undetermined": 645,
+      "English": 315,
+      "German": 6,
+      "Persian": 5,
+      "Italian": 5,
+      "Russian": 5,
+      "French": 5,
+      "Swedish": 3,
+      "Japanese": 2,
+      "Ukrainian": 2
+    }
+  },
+  "alchemy": {
+    "total": 9266,
+    "scanned": 1000,
+    "turkish": 1,
+    "langs": {
+      "English": 580,
+      "Undetermined": 383,
+      "German": 11,
+      "Hungarian": 4,
+      "Czech": 3,
+      "Italian": 3,
+      "Polish": 2,
+      "Slovak": 2,
+      "French": 2,
+      "Korean": 1
+    }
+  }
+}
