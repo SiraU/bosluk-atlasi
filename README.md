@@ -41,6 +41,7 @@ Seven translations are already live on Zenodo as a first proof of this loop.
 | `atlas-veri.json` | Final measured data: per-work OpenAIRE query, density, gap score |
 | `graf_olcum_sonuc.json` | Heat-map data: per-cluster totals and language counts |
 | `basvuru-taslagi.md` | Submission draft (story, checklist) |
+| `mcp_dogrulama.md` | Cross-validation of the public-API results against the Alien AI MCP connector (OpenAIRE Graph API V3) |
 
 ## Reproducing
 
@@ -73,6 +74,16 @@ without setup.
   qualify ambiguous common names (e.g. *"Henry More Cambridge Platonist"*, not just *"Henry
   More"*). `kapsanmayan_eserler.csv` records the original (poor) auto-generated query for
   comparison.
+
+## Alien AI MCP connector
+
+Access to the Alien AI MCP connector was granted on 17 August 2026. The `atlas_betigi.py`
+measurements above were built entirely on the public OpenAIRE Graph API before that; after
+gaining MCP access, 8 works spanning the density range were re-queried live through the Alien
+MCP connector (`openaire-graph-api-v3`, tool `search_5`) using the same query strings, to confirm
+the two sources agree. 6 of 8 matched exactly, 2 were close (small positive drift consistent with
+continuous re-indexing of the Graph between measurement dates). See `mcp_dogrulama.md` for the
+full comparison table and reproduction notes.
 
 ## License
 
