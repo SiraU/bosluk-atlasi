@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+ara-index.json
+atlas-veri-demo-backup.json
+atlas_full_run.log

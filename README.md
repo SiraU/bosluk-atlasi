@@ -23,8 +23,9 @@ OpenAIRE Graph returns for it, and combine that with a topic-level heat map of T
 representation across nine esotericism-adjacent research clusters (alchemy, gnosticism,
 hermeticism, Knights Templar, etc.).
 
-**The loop:** graph measures the gap → library translates the text → the CC-BY-SA translation
-is deposited on Zenodo with a DOI → the graph re-measures and the gap (in principle) narrows.
+**The loop:** graph measures the gap → library translates the text → the openly licensed
+translation (CC BY 4.0, some CC BY-SA 4.0) is deposited on Zenodo with a DOI → the graph
+re-measures and the gap (in principle) narrows.
 144 translations are already live on Zenodo (as of 18 August 2026) as a first proof of this loop.
 
 ## Repository contents
