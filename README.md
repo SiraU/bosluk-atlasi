@@ -25,7 +25,7 @@ hermeticism, Knights Templar, etc.).
 
 **The loop:** graph measures the gap → library translates the text → the CC-BY-SA translation
 is deposited on Zenodo with a DOI → the graph re-measures and the gap (in principle) narrows.
-Seven translations are already live on Zenodo as a first proof of this loop.
+144 translations are already live on Zenodo (as of 18 August 2026) as a first proof of this loop.
 
 ## Repository contents
 
